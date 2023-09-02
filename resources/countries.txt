@@ -24,7 +24,7 @@ Botswana
 Brazil
 Brunei
 Bulgaria
-Burkina
+Burkina Faso
 Burundi
 Cambodia
 Cameroon
@@ -144,9 +144,9 @@ Qatar
 Romania
 Russia
 Rwanda
-St Kitts & Nevis
+St Kitts and Nevis
 St Lucia
-Saint Vincent & the Grenadines
+Saint Vincent and the Grenadines
 Samoa
 San Marino
 Sao Tome & Principe
@@ -175,7 +175,7 @@ Tanzania
 Thailand
 Togo
 Tonga
-Trinidad & Tobago
+Trinidad and Tobago
 Tunisia
 Turkey
 Turkmenistan
