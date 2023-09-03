@@ -46,11 +46,11 @@ def check_winner(guesses):
 def main():
 
     print("Welcome to Hangman")
-    print("Spaces in the target word are denoted by a backslash.")
     input("Press any key to begin!")
     
     target_word = generate_word()
-    guessed_word = "".join(["\\ " if c == " " else "_ " for c in target_word])
+    # Maybe use dict for guessed word using index of char as key for each segment
+    guessed_word = "".join([" " if c == " " else "_" for c in target_word])
 
     remaining_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     guessed_letters = ""
@@ -68,11 +68,12 @@ def main():
 
         # Update guessed letters
         guessed_letters += current_letter
-        
+
         # Update guessed word
         if current_letter in target_word:
+
             letter_indexes = [idx for idx, char in enumerate(target_word) if char == current_letter]
-            print(letter_indexes)
+            guessed_word = "".join([current_letter if idx in letter_indexes else c for idx, c in enumerate(guessed_word)])
 
         # Update remaining letters
         remaining_letters = remaining_letters.replace(current_letter, " ")
@@ -85,9 +86,10 @@ def main():
     
     # Check for winner
     if check_winner(guesses):
-        print("You win!")
+        print(f"You win! The target word was {target_word}")
+
     else:
-        print(f"You lose! The target word = {target_word}")
+        print(f"You lose! The target word was {target_word}")
         print(display[guesses])
 
 
